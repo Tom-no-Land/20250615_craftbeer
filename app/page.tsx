@@ -39,30 +39,45 @@ export default function CraftBeerPortal() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-orange-400/20 via-yellow-400/20 to-green-400/20"></div>
+      <section className="relative py-20 px-4 overflow-hidden min-h-[80vh] flex items-center">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/placeholder.svg?height=800&width=1200&text=Friends+Toasting+Craft+Beer"
+            alt="Friends toasting with craft beer"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Dark overlay for text readability */}
+          <div className="absolute inset-0 bg-black/50"></div>
+          {/* Gradient overlay for better text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/40 to-black/60"></div>
+        </div>
+
         <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 bg-clip-text text-transparent leading-tight">
+            <h2 className="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-2xl leading-tight">
               乾杯から始まる
               <br />
-              冒険を。
+              <span className="bg-gradient-to-r from-orange-400 via-yellow-400 to-green-400 bg-clip-text text-transparent">
+                冒険を。
+              </span>
             </h2>
-            <p className="text-xl md:text-2xl text-gray-700 mb-8 font-medium">
+            <p className="text-xl md:text-2xl text-white/90 mb-8 font-medium drop-shadow-lg">
               あなたの特別なクラフトビール体験がここから始まります 🍻
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-lg transform hover:scale-105 transition-all"
+                className="bg-gradient-to-r from-orange-500 to-yellow-500 hover:from-orange-600 hover:to-yellow-600 text-white font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all border-2 border-white/20"
               >
                 <Beer className="mr-2 h-5 w-5" />
                 今すぐ探す
               </Button>
               <Button
                 size="lg"
-                variant="outline"
-                className="border-2 border-orange-400 text-orange-600 hover:bg-orange-50 font-bold py-4 px-8 rounded-full text-lg"
+                className="bg-white/10 backdrop-blur-sm border-2 border-white/30 text-white hover:bg-white/20 font-bold py-4 px-8 rounded-full text-lg shadow-2xl transform hover:scale-105 transition-all"
               >
                 <Calendar className="mr-2 h-5 w-5" />
                 イベント情報
@@ -70,11 +85,12 @@ export default function CraftBeerPortal() {
             </div>
           </div>
         </div>
-        {/* Decorative elements */}
-        <div className="absolute top-10 left-10 text-6xl opacity-20">🍺</div>
-        <div className="absolute top-20 right-20 text-4xl opacity-20">🌾</div>
-        <div className="absolute bottom-10 left-20 text-5xl opacity-20">🎉</div>
-        <div className="absolute bottom-20 right-10 text-3xl opacity-20">🍻</div>
+
+        {/* Floating beer elements */}
+        <div className="absolute top-20 left-10 text-4xl opacity-30 animate-bounce">🍺</div>
+        <div className="absolute top-32 right-20 text-3xl opacity-25 animate-pulse">🌾</div>
+        <div className="absolute bottom-20 left-20 text-5xl opacity-20 animate-bounce delay-1000">🎉</div>
+        <div className="absolute bottom-32 right-10 text-3xl opacity-30 animate-pulse delay-500">🍻</div>
       </section>
 
       {/* Search Widget */}
