@@ -42,13 +42,7 @@ export default function CraftBeerPortal() {
       <section className="relative py-20 px-4 overflow-hidden min-h-[80vh] flex items-center">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <Image
-            src="/placeholder.svg?height=800&width=1200&text=Friends+Toasting+Craft+Beer"
-            alt="Friends toasting with craft beer"
-            fill
-            className="object-cover"
-            priority
-          />
+          <Image src="/hero-bg.jpg" alt="Friends toasting with craft beer" fill className="object-cover" priority />
           {/* Dark overlay for text readability */}
           <div className="absolute inset-0 bg-black/50"></div>
           {/* Gradient overlay for better text contrast */}
