@@ -15,13 +15,8 @@ export default function CraftBeerPortal() {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
-              <div className="bg-gradient-to-r from-orange-400 to-yellow-400 p-2 rounded-full">
-                <Beer className="h-8 w-8 text-white" />
-              </div>
+              <Image src="/logo.png" alt="Craft Beer Fes Logo" width={120} height={80} className="h-12 w-auto" />
               <div>
-                <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-yellow-500 bg-clip-text text-transparent">
-                  クラフトビール ポータル
-                </h1>
                 <p className="text-sm text-gray-600">Craft Beer Portal Japan</p>
               </div>
             </div>
@@ -49,14 +44,12 @@ export default function CraftBeerPortal() {
         <div className="container mx-auto text-center relative z-10">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-orange-500 via-yellow-500 to-green-500 bg-clip-text text-transparent leading-tight">
-              日本全国の
+              乾杯から始まる
               <br />
-              クラフトビールを
-              <br />
-              楽しもう！
+              冒険を。
             </h2>
             <p className="text-xl md:text-2xl text-gray-700 mb-8 font-medium">
-              初心者からエキスパートまで、みんなで乾杯！🍻
+              あなたの特別なクラフトビール体験がここから始まります 🍻
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
